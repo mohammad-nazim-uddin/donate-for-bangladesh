@@ -1,3 +1,4 @@
+// noakhali flood
 document.getElementById('donate-btn').addEventListener('click', function () {
     const donateAmount = getInputFieldById('input-field')
     const currentAmount = getTextFieldById('current-amount')
@@ -22,9 +23,22 @@ document.getElementById('donate-btn').addEventListener('click', function () {
     alert(`Your money added to the fund`)
 
     const p = document.createElement('p');
-    p.innerText = `donate amount ${donateAmount} successfully`;
+    p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
+    p.classList.add('text-xl','font-bold')
 
     document.getElementById('donation-history').appendChild(p)
+
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+
+    const donationEntry = `Donation made on ${date} at ${time} (standard time Bangladesh)`;
+
+    const historyList = document.getElementById("donation-history");
+    const listItem = document.createElement("p");
+    listItem.textContent = donationEntry;
+    historyList.appendChild(listItem);
+
 
 })
 
