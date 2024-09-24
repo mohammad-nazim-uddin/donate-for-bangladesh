@@ -33,12 +33,12 @@
 
     <!-- Acction button -->
     <div class="flex justify-center gap-5 mt-20 mb-10">
-      <button class="btn btn-success">donation</button>
-      <button class="btn btn-success">history</button>
+      <button id="show-donation-home" class="btn btn-success">donation</button>
+      <button id="show-donation-history" class="btn btn-success">history</button>
     </div>
 
     <!-- donation cards -->
-    <div class="grid items-center">
+    <div id="donation-home" class="grid items-center">
       <div class="card lg:card-side bg-base-100 mb-10 border-2 rounded-md p-4 rounded-lg ">
         <figure>
           <img
@@ -104,8 +104,15 @@
       </div>
     </div>
 
+    <div id="donation-history" class="hidden">
+      <h1>Donation HIstory</h1>
+    </div>
+
+
     <script src="js/utilites.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/feature.js"></script>
+
     
   </body>
 </html>
