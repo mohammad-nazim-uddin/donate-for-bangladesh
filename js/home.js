@@ -19,5 +19,10 @@ document.getElementById('donate-btn').addEventListener('click', function () {
 
     document.getElementById('remaining-amount').innerText = newRemainingAmount
 
+    const p = document.createElement('p');
+    p.innerText = `donate amount ${donateAmount} successfully`;
+
+    document.getElementById('donation-history').appendChild(p)
+
 })
 
