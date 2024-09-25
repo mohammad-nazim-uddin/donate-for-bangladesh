@@ -9,16 +9,35 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
   </head>
   <body>
-    <!-- FAQ -->
-    <div class="flex">
-      <h1 class="text-[50px]">Frequently Asked Question</h1>
-      <img src="assets/FAQ.jpg" alt="" srcset="" />
+    <!-- navber -->
+   <div>
+    <div class="navbar bg-base-200 fixed top-0 left-0 right-0 z-10">
+      <div class="navbar-start">
+        <a href="blog.html">
+          <button class="btn btn-success">Blog</button>
+        </a>
+      </div>
+      <div class="navbar-center">
+        <img src="assets/logo.png" alt="" srcset="" />
+        <h1>Donate bangladesh</h1>
+      </div>
+      <div class="navbar-end">
+        <img src="assets/coin.png" alt="" srcset="" />
+        <h2 id="remaining-amount">5500</h2>
+      </div>
     </div>
-    <div class="grid m-20 border-2 rounded-md">
-      <div class="collapse collapse-arrow bg-base-200">
+   </div>
+    <!-- FAQ -->
+    <div class="flex items-center mt-20 justify-center sm:ml-16">
+      <h1 class="text-[50px]">Frequently Asked Question</h1>
+      <img class="w-2/5 lg:h-2/5" src="assets/FAQ1.png" alt="" srcset="" />
+    </div>
+    <div class="grid border-2 rounded-lg p-16 mt-{-10px}">
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">
           What is document object model (DOM)
@@ -32,7 +51,7 @@
           </p>
         </div>
       </div>
-      <div class="collapse collapse-arrow bg-base-200">
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           How do you select an element from the DOM?
@@ -49,7 +68,7 @@
           </p>
         </div>
       </div>
-      <div class="collapse collapse-arrow bg-base-200">
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           What is event delegation in the context of the DOM, and why is it
@@ -64,7 +83,7 @@
           </p>
         </div>
       </div>
-      <div class="collapse collapse-arrow bg-base-200">
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           How do you manipulate an element's attributes and styles using the
@@ -72,10 +91,12 @@
         </div>
         <div class="collapse-content">
           <p>
-            Event Delegation is a pattern based upon the concept of Event
-            Bubbling. It is an event-handling pattern that allows you to handle
-            events at a higher level in the DOM tree other than the level where
-            the event was first received.
+            To manipulate an element's attributes and styles using the DOM, you can: <br>
+            1.Change and remove existing elements in the DOM. <br>
+            2.Create and add new elements to the page. <br>
+            3.Change the styles for elements.
+            Add event listeners to the elements to make them interactive1. <br>
+            4.To change the style of an HTML element, use the syntax: `document.getElementById(id).style.property = new style
           </p>
         </div>
       </div>

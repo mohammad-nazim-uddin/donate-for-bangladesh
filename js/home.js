@@ -28,15 +28,15 @@ document.getElementById('donate-btn').addEventListener('click', function () {
         }else{
             alert('You have Enterd a wrong amount')
         }
-
-   
+        
+    
 
     const p = document.createElement('p');
     p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
     p.classList.add('text-xl', 'font-bold');
 
     const donationEntryDiv = document.createElement('div');
-    donationEntryDiv.classList.add('donation-entry','border-2','mt-16','p-5','rounded-md');
+    donationEntryDiv.classList.add('donation-entry','border-2','mt-10','p-5','rounded-md');
 
     donationEntryDiv.appendChild(p);
 
