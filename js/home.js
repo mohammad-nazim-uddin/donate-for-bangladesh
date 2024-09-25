@@ -13,7 +13,9 @@ document.getElementById('donate-btn').addEventListener('click', function () {
 
     const newAmount = donateAmount + currentAmount
 
-    const newRemainingAmount = remainingAmount - newAmount
+    if(donateAmount<=remainingAmount){
+       
+        const newRemainingAmount = remainingAmount - donateAmount
 
     document.getElementById('current-amount').innerText = newAmount
 
@@ -22,12 +24,21 @@ document.getElementById('donate-btn').addEventListener('click', function () {
     document.getElementById('remaining-amount').innerText = newRemainingAmount
 
     alert(`Your money added to the fund`)
+    
+        }else{
+            alert('You have Enterd a wrong amount')
+        }
+
+   
 
     const p = document.createElement('p');
     p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
-    p.classList.add('text-xl','font-bold')
+    p.classList.add('text-xl', 'font-bold');
 
-    document.getElementById('donation-history').appendChild(p)
+    const donationEntryDiv = document.createElement('div');
+    donationEntryDiv.classList.add('donation-entry','border-2','mt-16','p-5','rounded-md');
+
+    donationEntryDiv.appendChild(p);
 
     const now = new Date();
     const date = now.toLocaleDateString();
@@ -35,12 +46,12 @@ document.getElementById('donate-btn').addEventListener('click', function () {
 
     const donationEntry = `Donation made on ${date} at ${time} (standard time Bangladesh)`;
 
-    const historyList = document.getElementById("donation-history");
     const listItem = document.createElement("p");
     listItem.textContent = donationEntry;
-    historyList.appendChild(listItem);
 
+    donationEntryDiv.appendChild(listItem);
 
+    document.getElementById('donation-history').appendChild(donationEntryDiv);
 })
 
 // feni flood
@@ -57,7 +68,9 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
 
     const newAmount = donateAmount + currentAmount
 
-    const newRemainingAmount = remainingAmount - newAmount
+    if(donateAmount<=remainingAmount){
+       
+    const newRemainingAmount = remainingAmount -  donateAmount
 
     document.getElementById('current-amount-feni').innerText = newAmount
 
@@ -67,11 +80,21 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
 
     alert(`Your money added to the fund`)
 
-    const p = document.createElement('p');
-    p.innerText = `${donateAmount} Taka Donated for flood in Feni`;
-    p.classList.add('text-xl','font-bold')
+    }else{
+        alert('You have Enterd a wrong amount')
+    }
 
-    document.getElementById('donation-history').appendChild(p)
+
+
+
+    const p = document.createElement('p');
+    p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
+    p.classList.add('text-xl', 'font-bold');
+
+    const donationEntryDiv = document.createElement('div');
+    donationEntryDiv.classList.add('donation-entry','border-2','mt-5','p-5','rounded-md');
+
+    donationEntryDiv.appendChild(p);
 
     const now = new Date();
     const date = now.toLocaleDateString();
@@ -79,12 +102,12 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
 
     const donationEntry = `Donation made on ${date} at ${time} (standard time Bangladesh)`;
 
-    const historyList = document.getElementById("donation-history");
     const listItem = document.createElement("p");
     listItem.textContent = donationEntry;
-    historyList.appendChild(listItem);
 
+    donationEntryDiv.appendChild(listItem);
 
+    document.getElementById('donation-history').appendChild(donationEntryDiv);
 })
 
 //Quota Aid
@@ -100,33 +123,43 @@ document.getElementById('donate-btn-quota').addEventListener('click', function (
     }
 
     const newAmount = donateAmount + currentAmount
+    if(donateAmount<=remainingAmount){
+        const newRemainingAmount = remainingAmount -  donateAmount
 
-    const newRemainingAmount = remainingAmount - newAmount
+        document.getElementById('current-amount-quota').innerText = newAmount
+    
+        document.getElementById('input-field-quota').value = ''
+    
+        document.getElementById('remaining-amount').innerText = newRemainingAmount
+    
+        alert(`Your money added to the fund`)
 
-    document.getElementById('current-amount-quota').innerText = newAmount
+    }else{
+        alert('You have Enterd a wrong amount')
+    }
 
-    document.getElementById('input-field-quota').value = ''
-
-    document.getElementById('remaining-amount').innerText = newRemainingAmount
-
-    alert(`Your money added to the fund`)
 
     const p = document.createElement('p');
-    p.innerText = `${donateAmount} Taka Donated for Aid for Injured in the Quota Movement,Bangladesh`;
-    p.classList.add('text-xl','font-bold')
+    p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
+    p.classList.add('text-xl', 'font-bold');
 
-    document.getElementById('donation-history').appendChild(p)
+    const donationEntryDiv = document.createElement('div');
+    donationEntryDiv.classList.add('donation-entry','border-2','mt-5','p-5','rounded-md');
+
+    donationEntryDiv.appendChild(p);
 
     const now = new Date();
     const date = now.toLocaleDateString();
     const time = now.toLocaleTimeString();
 
-    const donationEntry = `Date: ${date} at ${time} (standard time Bangladesh)`;
+    const donationEntry = `Donation made on ${date} at ${time} (standard time Bangladesh)`;
 
-    const historyList = document.getElementById("donation-history");
     const listItem = document.createElement("p");
     listItem.textContent = donationEntry;
-    historyList.appendChild(listItem);
+
+    donationEntryDiv.appendChild(listItem);
+
+    document.getElementById('donation-history').appendChild(donationEntryDiv);
 
 
 })
