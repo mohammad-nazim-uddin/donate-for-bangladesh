@@ -23,13 +23,11 @@ document.getElementById('donate-btn').addEventListener('click', function () {
 
     document.getElementById('remaining-amount').innerText = newRemainingAmount
 
-    alert(`Your money added to the fund`)
+    alert(`Congratulations Your money has added to the fund`)
     
         }else{
             alert('You have Enterd a wrong amount')
         }
-        
-    
 
     const p = document.createElement('p');
     p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
@@ -88,7 +86,7 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
 
 
     const p = document.createElement('p');
-    p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
+    p.innerText = `${donateAmount} Taka Donated for flood in Feni`;
     p.classList.add('text-xl', 'font-bold');
 
     const donationEntryDiv = document.createElement('div');
@@ -140,7 +138,7 @@ document.getElementById('donate-btn-quota').addEventListener('click', function (
 
 
     const p = document.createElement('p');
-    p.innerText = `${donateAmount} Taka Donated for flood in Noakhali`;
+    p.innerText = `${donateAmount} Taka Donated for Aid for injured people in Quota Movement`;
     p.classList.add('text-xl', 'font-bold');
 
     const donationEntryDiv = document.createElement('div');
