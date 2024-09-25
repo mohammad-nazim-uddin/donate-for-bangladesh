@@ -23,7 +23,7 @@ document.getElementById('donate-btn').addEventListener('click', function () {
 
     document.getElementById('remaining-amount').innerText = newRemainingAmount
 
-    alert(`Congratulations Your money has added to the fund`)
+    alert(`Congratulations Your donation has added to the fund`)
     
         }else{
             alert('You have Enterd a wrong amount')
@@ -76,7 +76,7 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
 
     document.getElementById('remaining-amount').innerText = newRemainingAmount
 
-    alert(`Your money added to the fund`)
+    alert(`Congratulation your donation added to the fund`)
 
     }else{
         alert('You have Enterd a wrong amount')
@@ -130,7 +130,7 @@ document.getElementById('donate-btn-quota').addEventListener('click', function (
     
         document.getElementById('remaining-amount').innerText = newRemainingAmount
     
-        alert(`Your money added to the fund`)
+        alert(`Congratulation Your donation added to the fund`)
 
     }else{
         alert('You have Enterd a wrong amount')
